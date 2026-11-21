@@ -34,9 +34,9 @@ Thumbs.db
 media/
 
 # Include FoodExpress menu images
-!Django/media/
-!Django/media/menu/
-Django/media/menu/test_image*.jpeg
+!Backend/media/
+!Backend/media/menu/
+Backend/media/menu/test_image*.jpeg
 
 # Duplicate menu image folder
 FoodItems/

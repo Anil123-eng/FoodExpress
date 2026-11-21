@@ -63,7 +63,7 @@ FoodExpress is a portfolio project that allows users to browse food items, searc
 ```text
 FoodExpress/
 │
-├── Django/
+├── Backend/
 │   ├── accounts/
 │   ├── cart/
 │   ├── config/
@@ -76,7 +76,7 @@ FoodExpress/
 │   ├── manage.py
 │   └── requirements.txt
 │
-├── React/
+├── Frontend/
 │   ├── public/
 │   ├── src/
 │   │   ├── components/
@@ -117,10 +117,10 @@ cd FoodExpress
 
 ### 2. Backend Setup
 
-Navigate to the Django directory:
+Navigate to the Backend directory:
 
 ```bash
-cd Django
+cd Backend
 ```
 
 Create a virtual environment:
@@ -143,7 +143,7 @@ pip install -r requirements.txt
 
 ### 3. Environment Configuration
 
-Create a `.env` file inside the `Django` directory.
+Create a `.env` file inside the `Backend` directory.
 
 Copy the contents from `.env.example` and configure your environment variables:
 
@@ -177,7 +177,7 @@ python manage.py migrate
 
 ### 5. Start the Backend Server
 
-From the Django directory:
+From the Backend directory:
 
 ```bash
 python manage.py runserver
@@ -191,10 +191,10 @@ http://127.0.0.1:8000/
 
 ### 6. Frontend Setup
 
-Open a new terminal and navigate to the React directory:
+Open a new terminal and navigate to the Frontend directory from the project root:
 
 ```bash
-cd FoodExpress/React
+cd FoodExpress/Frontend
 ```
 
 Install dependencies:
