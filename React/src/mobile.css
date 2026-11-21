@@ -1,0 +1,49 @@
+
+/* ================================
+   Small Mobile Screens
+   ================================ */
+
+@media (max-width: 600px) {
+  main {
+    padding: 0 10px;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+  }
+
+  header h1 {
+    font-size: 26px;
+  }
+}
+
+/* ================================
+   Mobile Common Styles
+   ================================ */
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .home-page h1 {
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .home-page p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .page-container {
+    padding-bottom: 100px;
+  }
+}
+
+/* ================================
+   Mobile Login / Register
+   ================================ */
+
+ 

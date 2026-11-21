@@ -1,0 +1,58 @@
+/* Order History Title */
+
+.order-history-title {
+  text-align: center;
+  color: #222 !important;
+  font-size: 32px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+/* Order History Card */
+.order-history-item {
+  background: white;
+  width: calc(100% - 40px);
+  max-width: 550px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+/* Order History Image */
+.order-history-image {
+  width: 150px;
+  height: 120px;
+  object-fit: fill;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Order Details */
+.order-history-item h3 {
+  margin-bottom: 15px;
+}
+
+.order-history-item p {
+  margin: 8px 0;
+}
+
+.order-history-item h4 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+
+/* ================================
+   Desktop Order History
+   ================================ */
+
+@media (min-width: 769px) {
+  .order-history-item {
+    max-width: 400px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+}

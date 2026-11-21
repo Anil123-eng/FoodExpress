@@ -1,0 +1,177 @@
+/* ================================
+   Account Page
+   ================================ */
+
+.page-container.account-page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.account-title {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #222222;
+}
+
+.account-page p {
+  margin: 12px 0;
+  overflow-wrap: anywhere;
+}
+
+/* Account Action Buttons */
+
+.account-page .account-actions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 8px;
+  margin-top: 25px;
+}
+
+.account-page .account-actions button {
+  flex: 1;
+  min-width: 0;
+  width: auto;
+  min-height: 45px;
+  padding: 10px 6px;
+  border: none;
+  border-radius: 8px;
+  background: #ff6b35;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.account-page .account-actions button:hover {
+  opacity: 0.85;
+}
+
+/* Edit Profile and Change Password Forms */
+
+.account-page .edit-profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.account-page .edit-profile-form h3 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.account-page .edit-profile-form label {
+  font-weight: 600;
+}
+
+.account-page .edit-profile-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background: #ffffff;
+  color: #222222;
+}
+
+.account-page .edit-profile-form input:disabled {
+  background: #f2f2f2;
+  color: #666666;
+}
+
+/* ================================
+   Mobile Account Page
+   ================================ */
+
+@media (max-width: 768px) {
+  .page-container.account-page {
+    width: 100%;
+    max-width: calc(100% - 40px);
+    margin: 40px auto;
+    padding: 25px 20px;
+    text-align: center;
+  }
+
+  .account-page .account-actions {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .account-page .account-actions button {
+    flex: 0 0 45px;
+    width: 100%;
+    max-width: 220px;
+    height: 45px;
+    min-height: 45px;
+    padding: 0 8px;
+    font-size: 14px;
+  }
+}
+
+/* ================================
+   Desktop Account Page
+   ================================ */
+
+@media (min-width: 769px) {
+  .page-container.account-page {
+    width: 750px;
+    max-width: calc(100% - 40px);
+    margin: 40px auto;
+    padding: 25px 20px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+  }
+
+  .account-page .edit-profile-form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 25px;
+    text-align: left;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .account-page .edit-profile-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+  }
+
+  .account-page .edit-profile-form input {
+    font-size: 16px;
+    border-radius: 6px;
+  }
+
+  .account-page .edit-profile-form input:disabled {
+    cursor: not-allowed;
+  }
+}
+
+/* Account Input Autofill */
+
+.account-page .edit-profile-form input:-webkit-autofill,
+.account-page .edit-profile-form input:-webkit-autofill:hover,
+.account-page .edit-profile-form input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #333333;
+  box-shadow: 0 0 0 1000px #ffffff inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.account-page .edit-profile-form input[type="email"],
+.account-page .edit-profile-form input[type="password"] {
+  background-color: #ffffff !important;
+  color: #333333 !important;
+  -webkit-text-fill-color: #333333 !important;
+}

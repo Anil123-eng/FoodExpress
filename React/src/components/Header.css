@@ -1,0 +1,82 @@
+
+/* Common Header styles */
+.header {
+  color: white;
+  background: linear-gradient(135deg, #ff6b35, #ff3d68);
+  padding: 16px 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.header-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  height: 70px;
+  margin: 0 auto;
+}
+
+.logo {
+  color: white;
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: bold;
+  position: relative;
+  left: -60px;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 25px;
+  position: absolute;
+  right: -40px;
+  bottom: 0;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.main-nav button {
+  background: none;
+  border: none;
+  color: white;
+  font: inherit;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.main-nav a:hover {
+  opacity: 0.8;
+}
+
+
+/* Mobile Header */
+@media (max-width: 768px) {
+  .header {
+    padding: 15px 20px;
+  }
+
+  .header-container {
+    flex-direction: column;
+    height: auto;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .logo {
+    position: static;
+    left: 0;
+  }
+
+  .main-nav {
+    display: none;
+  }
+}

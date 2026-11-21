@@ -1,0 +1,350 @@
+/* ================================
+   FoodExpress - Menu Component
+   ================================ */
+
+
+/* ================================
+   Common Menu Styles
+   ================================ */
+
+.menu-page {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.menu {
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.menu-title {
+  color: #222;
+  font-weight: 700;
+}
+
+.menu-subtitle {
+  color: #666;
+  line-height: 1.5;
+}
+
+.menu-search {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  background: #fff;
+  outline: none;
+  transition: 0.2s;
+}
+
+.menu-category,
+.menu-sort {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  outline: none;
+  color: #333;
+}
+
+.menu-search:focus,
+.menu-category:focus,
+.menu-sort:focus {
+  border-color: #ff6b35;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.12);
+}
+
+.menu-search,
+.menu-category,
+.menu-sort {
+  border-radius: 10px;
+}
+
+.menu-filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-item {
+  min-width: 0;
+  background: #fff;
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: 0.2s;
+  box-sizing: border-box;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.menu-item-image {
+  display: block;
+  width: 100%;
+  object-fit: fill;
+  border-radius: 12px;
+}
+
+.menu-item h3 {
+  color: #222;
+  font-weight: 700;
+}
+
+.menu-item p {
+  color: #555;
+  line-height: 1.5;
+}
+
+.menu-item-category {
+  color: #ff6b35;
+  font-weight: 600;
+}
+
+.menu-item-price {
+  color: #ff6b35;
+  font-weight: 700;
+}
+
+.menu-item button {
+  border: none;
+  border-radius: 8px;
+  background: #ff6b35;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.menu-item button:hover {
+  background: #e85a24;
+  transform: translateY(-2px);
+}
+
+.order-now-button {
+  background: #222 !important;
+}
+
+.order-now-button:hover {
+  background: #444 !important;
+}
+
+.selected-menu-item {
+  border: 2px solid #ff6b35;
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.22);
+}
+
+.no-results {
+  margin: 30px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #666;
+}
+
+
+/* ================================
+   Mobile Menu
+   ================================ */
+
+@media (max-width: 768px) {
+
+  .menu {
+    padding: 0 10px 20px;
+  }
+
+  .menu-title {
+    font-size: 28px;
+  }
+
+  .menu-search {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 15px 0;
+    padding: 16px 18px;
+    min-height: 52px;
+    font-size: 17px;
+    color: #333;
+    -webkit-text-fill-color: #333;
+  }
+
+  .menu-filters {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 12px;
+    row-gap: 12px;
+    margin: 15px 0 20px;
+    padding: 0;
+    height: auto;
+  }
+
+  .menu-filters > .menu-category,
+  .menu-filters > .menu-sort {
+    flex: 0 0 auto;
+    margin: 0;
+    transform: none;
+  }
+
+  .menu-category,
+  .menu-sort {
+    width: 100%;
+    min-height: 44px;
+  }
+
+  .menu-category {
+    height: 48px;
+    min-height: 48px;
+    max-height: 48px;
+  }
+
+  .menu-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 100%;
+    margin: 25px auto 0;
+  }
+
+  .menu-item {
+    width: 100%;
+    min-width: 0;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .menu-item-image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-sizing: border-box;
+  }
+
+  .menu-item h3 {
+    font-size: 22px;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .menu-item button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(50% - 8px);
+    min-width: 0;
+    box-sizing: border-box;
+    margin: 12px 0 0;
+    padding: 12px 4px;
+    font-size: 13px;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .menu-item button + button {
+    margin-left: 12px;
+  }
+
+  .order-now-button {
+    margin-left: 0;
+  }
+}
+
+
+/* ================================
+   Desktop Menu
+   ================================ */
+
+@media (min-width: 769px) {
+
+  .menu {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 30px 60px;
+  }
+
+  .menu-title {
+    font-size: 34px;
+    margin: 0 0 8px;
+  }
+
+  .menu-subtitle {
+    font-size: 16px;
+    margin: 0 0 20px;
+  }
+
+  .menu-search {
+    max-width: 520px;
+    padding: 14px 18px;
+    margin: 25px auto 12px;
+    display: block;
+    font-size: 16px;
+    color: #333;
+    -webkit-text-fill-color: #333;
+  }
+
+  .menu-category,
+  .menu-sort {
+    max-width: 220px;
+    padding: 14px 18px;
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .menu-filters {
+    gap: 150px;
+    margin-bottom: 30px;
+  }
+
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 700px;
+    margin: 25px auto 0;
+  }
+
+  .menu-item {
+    padding: 20px;
+    margin-top: 15px;
+  }
+
+  .menu-item-image {
+    height: 200px;
+    margin-bottom: 15px;
+    object-fit: fill;
+  }
+
+  .menu-item h3 {
+    font-size: 21px;
+    margin: 5px 0 8px;
+  }
+
+  .menu-item p {
+    font-size: 15px;
+    margin: 8px 0;
+  }
+
+  .menu-item-price {
+    font-size: 20px;
+    margin: 10px 0 15px;
+  }
+
+  .menu-item button {
+    margin-top: 15px;
+    padding: 13px 29px;
+    font-size: 16px;
+  }
+
+  .order-now-button {
+    margin-left: 10px;
+  }
+}

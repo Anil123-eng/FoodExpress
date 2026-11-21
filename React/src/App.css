@@ -1,0 +1,256 @@
+/* ================================
+   FoodExpress - Common CSS
+   ================================ */
+
+
+/* ================================
+   Global
+   ================================ */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff7f0;
+  color: #2d2d2d;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+
+/* ================================
+   Header Base
+   ================================ */
+
+
+
+/* ================================
+   Home
+   ================================ */
+
+.home-page {
+  text-align: center;
+}
+
+.home-page h1 {
+  color: #222;
+}
+
+.home-page p {
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.home-page button {
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+/* ================================
+   Login
+   ================================ */
+ 
+
+
+/* ================================
+   Register
+   ================================ */
+
+ 
+
+/* ================================
+   Menu Base
+   ================================ */
+
+ 
+
+/* ================================
+   Cart
+   ================================ */
+ 
+
+
+/* ================================
+   Checkout
+   ================================ */
+ 
+
+
+/* ================================
+   Order History
+   ================================ */
+
+ 
+/* ================================
+   Account
+   ================================ */
+
+.page-container h2 {
+  margin-bottom: 25px;
+}
+
+ 
+
+.logout-button {
+  background: #eee !important;
+  color: #333 !important;
+  border: 1px solid #ccc !important;
+}
+
+.logout-button:hover {
+  background: #ddd !important;
+}
+
+ 
+
+
+
+
+/* ================================
+   Account Input Autofill
+   ================================ */
+
+ 
+
+
+
+.password-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-input-wrapper input {
+  width: 100%;
+  box-sizing: border-box;
+  padding-right: 42px;
+}
+
+.password-input-wrapper .password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 4px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  cursor: pointer;
+  line-height: 1;
+}
+
+
+
+/* ================================
+   Mobile Navigation Base
+   ================================ */
+
+@media (min-width: 769px) {
+    .mobile-nav {
+        display: none;
+    }
+}
+
+
+.order-history-product-link {
+  color: #333;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 10px 0;
+}
+
+
+
+.app-notification {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: max-content;
+  max-width: calc(100vw - 48px);
+  padding: 16px 18px;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #333333;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.16);
+  border-left: 5px solid #16a34a;
+  box-sizing: border-box;
+}
+
+.app-notification.success .notification-icon {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.app-notification.error {
+  border-left-color: #dc2626;
+}
+
+.app-notification.error .notification-icon {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.notification-icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.notification-message {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.notification-close {
+  border: none;
+  background: transparent;
+  color: #666666;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0 2px;
+  margin-left: 6px;
+}
+
+.notification-close:hover {
+  color: #222222;
+}
+
+@media (max-width: 600px) {
+  .app-notification {
+    top: 12px;
+    right: 12px;
+    max-width: calc(100vw - 24px);
+    padding: 12px;
+  }
+
+  .notification-message {
+    font-size: 14px;
+  }
+}

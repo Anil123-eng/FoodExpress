@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Node dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Django
+staticfiles/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Uploaded media (exclude by default)
+media/
+
+# Include FoodExpress menu images
+!Django/media/
+!Django/media/menu/
+Django/media/menu/test_image*.jpeg
+
+# Duplicate menu image folder
+FoodItems/
